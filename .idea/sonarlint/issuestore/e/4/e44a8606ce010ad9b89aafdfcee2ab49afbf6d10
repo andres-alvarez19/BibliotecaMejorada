@@ -1,0 +1,20 @@
+
+]
+java:S1220""Move this file to a named package.8í…¢Üó1J$dbc16347-91df-479c-a21a-2df0126a44ce
+m	java:S106"+Replace this use of System.out by a logger.(Í³ç¾8õ…¢Üó1J$f0505709-0459-4d61-9a60-bbb3a41861f4
+r	java:S106"+Replace this use of System.out by a logger.(Ì®Üæøÿÿÿÿ8ö…¢Üó1J$e0a88186-93fd-4239-9a1b-e5ef9e8067a6
+r	java:S106"+Replace this use of System.out by a logger.(Òê•Ñúÿÿÿÿ8ö…¢Üó1J$a975065e-f4e7-473d-90b0-6b5de748a013
+r	java:S106"+Replace this use of System.out by a logger.(ïÈéËùÿÿÿÿ8ö…¢Üó1J$4587c7cf-671b-457e-b000-ec37cdd1df3d
+m	java:S106"+Replace this use of System.out by a logger.(Ø©Šá8ö…¢Üó1J$714b455d-1014-48be-bb20-94f27fb941b6
+m	java:S106"+Replace this use of System.out by a logger.(£«š—8÷…¢Üó1J$583dbc48-df3f-466e-96df-c1e260449e0e
+m	java:S106"+Replace this use of System.out by a logger.(ÿ×Õ8÷…¢Üó1J$916996e4-27f8-4a79-854c-de78840054f4
+m	java:S106""+Replace this use of System.out by a logger.(£«š—8÷…¢Üó1J$f92b0eb3-c612-4d7e-b582-e8d8e7534859
+r	java:S106#"+Replace this use of System.out by a logger.(€¸ùÆøÿÿÿÿ8÷…¢Üó1J$759a3525-185d-4fe3-85c3-996ecf84f2d2
+r	java:S106$"+Replace this use of System.out by a logger.(ïÈéËùÿÿÿÿ8ø…¢Üó1J$4dbfee5f-8f00-479e-8cd4-b6edc986e1cf
+m	java:S106*"+Replace this use of System.out by a logger.(ÖÍ—8ø…¢Üó1J$dcf44ccc-aeb9-4173-8a69-46fdebb5c5a2
+r	java:S106+"+Replace this use of System.out by a logger.(Ú±›‘ÿÿÿÿÿ8ø…¢Üó1J$38fe139e-e720-4101-b85d-de5d04833c4a
+m	java:S106."+Replace this use of System.out by a logger.(Í‚³¥8ø…¢Üó1J$9420904e-9306-4132-87a3-f4fcd0490e00
+m	java:S1061"+Replace this use of System.out by a logger.(¸²Çã8ª‚§Üó1J$43e9ea8b-d4a7-4d75-8a1b-91c1668fc954
+L	java:S1063"+Replace this use of System.out by a logger.(¬½»ûÿÿÿÿ8­±§Üó1
+w
+java:S1128"/Remove this unused import 'java.sql.SQLOutput'.(ê¤òÃùÿÿÿÿ8ù…¢Üó1J$57ce37c5-9b1b-4aaa-9137-6e7b3e6b5934
