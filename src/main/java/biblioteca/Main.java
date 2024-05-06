@@ -1,41 +1,49 @@
 package biblioteca;
 
-import biblioteca.libros.Libro;
-import biblioteca.libros.Biblioteca;
-import biblioteca.usuarios.Administrador;
-import biblioteca.usuarios.Usuario;
+import java.util.logging.Logger;
 
 public class Main {
+    private static final Logger logger = Logger.getLogger(Main.class.getName());
     public static void main(String[] args) {
+        String mensajeLog ;
         Biblioteca biblioteca = new Biblioteca();
-        Administrador administrador = new Administrador("Juan",biblioteca);
+        GestorUsuario gestorUsuario = new GestorUsuario();
+        GestorLibro gestorLibro = new GestorLibro();
+        Administrador administrador = new Administrador(gestorUsuario, gestorLibro);
         Usuario usuario = new Usuario("Pedro", "Estudiante");
         Usuario usuario2 = new Usuario("Maria", "Profesor");
         Libro libro = new Libro("El principito", "Antoine de Saint-Exupéry", "Cuento", 2);
         Libro libro2 = new Libro("El señor de los anillos", "J.R.R. Tolkien", "Fantasia", 3);
 
-        administrador.agregarUsuario(usuario);
-        administrador.agregarUsuario(usuario2);
-        administrador.agregarLibro(libro);
-        administrador.agregarLibro(libro2);
+        administrador.gestorUsuario.agregarUsuario(usuario);
+        administrador.gestorUsuario.agregarUsuario(usuario2);
+        administrador.gestorLibro.agregarLibro(libro);
+        administrador.gestorLibro.agregarLibro(libro2);
 
-        System.out.println(biblioteca);
-        System.out.println(biblioteca.mostrarUsuarios());
+        mensajeLog = administrador.gestorLibro.obtenerLibros().toString();
+        logger.info(mensajeLog);
+        mensajeLog = administrador.gestorUsuario.mostrarUsuarios();
+        logger.info(mensajeLog);
 
-        usuario.realizarReserva(libro);
-        usuario.realizarReserva(libro2);
-        usuario.agregarCalificacion(5,libro);
+        biblioteca.prestarLibro(libro, usuario);
+        biblioteca.prestarLibro(libro2, usuario2);
+
+        usuario.agregarCalificacion(5);
+        libro.agregarCalificacion(1);
         libro.agregarComentario("Excelente libro");
 
-        System.out.printf("Comentarios de libro %s : %s %n",libro.getTitulo(),libro.getComentarios());
-        System.out.printf("Calificaciones de libro %s : %s %n",libro.getTitulo(),libro.getCalificaciones());
-        System.out.printf("Libros reservados de %s son %s%n",usuario.getNombre(),usuario.getLibrosReservados());
+        mensajeLog = "Comentarios de libro " + libro.getTitulo() + " : " + libro.getComentarios();
+        logger.info(mensajeLog);
+        mensajeLog = "Calificaciones de libro " + libro.getTitulo() + " : " + libro.getCalificaciones();
+        logger.info(mensajeLog);
+        mensajeLog = "Libros reservados de " + usuario.getNombre() + " son " + usuario.getLibrosReservados();
+        logger.info(mensajeLog);
 
-        administrador.quitarReserva(usuario,libro);
+        biblioteca.estadoPrestamo(usuario);
 
-        System.out.printf("Historial de prestamos de %s son %s%n",usuario.getNombre(),usuario.getHistorialPrestamos());
-        System.out.printf("Libros reservados de %s son %s%n",usuario.getNombre(),usuario.getLibrosReservados());
-
-
+        mensajeLog = "Historial de prestamos de " + usuario.getNombre() + " " + usuario.getHistorialPrestamos();
+        logger.info(mensajeLog);
+        mensajeLog = "Libros reservados de " + usuario.getNombre() + " es " + usuario.getLibrosReservados();
+        logger.info(mensajeLog);
     }
 }

@@ -1,13 +1,10 @@
-package biblioteca.usuarios;
+package biblioteca;
 
-import biblioteca.libros.GestorLibro;
+public class Administrador {
+    private GestorUsuario gestorUsuario;
+    private GestorLibro gestorLibro;
 
-public class Administrador extends Persona {
-    GestorUsuario gestorUsuario;
-    GestorLibro gestorLibro;
-
-    public Administrador(String nombre, GestorUsuario gestorUsuario, GestorLibro gestorLibro) {
-        super(nombre, "Administrador");
+    public Administrador(GestorUsuario gestorUsuario, GestorLibro gestorLibro) {
         this.gestorUsuario = gestorUsuario;
         this.gestorLibro = gestorLibro;
     }

@@ -1,5 +1,5 @@
-package biblioteca.libros;
+package biblioteca;
 
 public interface Comentario {
-    public void comentar(String comentario);
+    public void agregarComentario(String comentario);
 }

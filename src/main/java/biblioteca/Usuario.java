@@ -1,19 +1,20 @@
-package biblioteca.usuarios;
+package biblioteca;
 
-import biblioteca.libros.Libro;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Usuario extends Persona {
+public class Usuario extends Valoracion {
+    private String nombre;
+    private String tipo;
     private List<Libro> historialPrestamos;
     private List<Libro> librosReservados;
-    private List<Integer> calificaciones;
 
     public Usuario(String nombre, String tipo) {
-        super(nombre, tipo);
+        super();
+        this.nombre = nombre;
+        this.tipo = tipo;
         this.historialPrestamos = new ArrayList<>();
         this.librosReservados = new ArrayList<>();
-        this.calificaciones = new ArrayList<>();
     }
 
     private void agregarPrestamo(Libro libro) {
@@ -25,11 +26,6 @@ public class Usuario extends Persona {
         agregarPrestamo(libro);
     }
 
-    public void agregarCalificacion(int calificacion, Libro libro) {
-        libro.agregarCalificacion(calificacion);
-        calificaciones.add(calificacion);
-    }
-
     public List<Libro> getHistorialPrestamos() {
         return historialPrestamos;
     }
@@ -39,13 +35,24 @@ public class Usuario extends Persona {
     public List<Libro> getLibrosReservados() {
         return librosReservados;
     }
+    public String getNombre() {
+        return nombre;
+    }
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     @Override
     public String toString() {
         return getNombre()+ " {" +
                 "tipo = " + getTipo() +
                 "historialPrestamos=" + historialPrestamos +
                 ", librosReservados=" + librosReservados +
-                ", calificaciones=" + calificaciones +
+                ", calificaciones=" + super.getCalificaciones() +
                 '}';
     }
 }
