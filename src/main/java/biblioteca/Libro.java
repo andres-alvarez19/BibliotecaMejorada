@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Libro {
     private String titulo;
-    private String autor;
-    private String categoria;
+    private final String autor;
+    private  final String categoria;
     private int ejemplaresDisponibles;
     private List<Integer> calificaciones;
     private List<String> comentarios;

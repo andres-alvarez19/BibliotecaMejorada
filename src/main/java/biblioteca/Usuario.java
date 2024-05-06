@@ -21,13 +21,8 @@ public class Usuario extends Persona {
     }
 
     public void realizarReserva(Libro libro) {
-        if(libro.getEjemplaresDisponibles() == 0) {
-            throw new IllegalArgumentException("No hay ejemplares disponibles");
-        }else {
-            librosReservados.add(libro);
-            agregarPrestamo(libro);
-            libro.prestar();
-        }
+        librosReservados.add(libro);
+        agregarPrestamo(libro);
     }
 
     public void agregarCalificacion(int calificacion, Libro libro) {
@@ -38,14 +33,12 @@ public class Usuario extends Persona {
     public List<Libro> getHistorialPrestamos() {
         return historialPrestamos;
     }
+    public void devolverLibro(Libro libro) {
+        librosReservados.remove(libro);
+    }
     public List<Libro> getLibrosReservados() {
         return librosReservados;
     }
-
-    public List<Integer> getCalificaciones() {
-        return calificaciones;
-    }
-
     @Override
     public String toString() {
         return getNombre()+ " {" +
