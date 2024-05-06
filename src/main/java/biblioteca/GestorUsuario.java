@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GestorUsuario {
-    List<Usuario> usuarios;
+    private List<Usuario> usuarios;
 
     public GestorUsuario() {
         this.usuarios = new ArrayList<>();

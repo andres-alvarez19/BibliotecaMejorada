@@ -8,4 +8,11 @@ public class Administrador {
         this.gestorUsuario = gestorUsuario;
         this.gestorLibro = gestorLibro;
     }
+
+    public GestorUsuario getGestorUsuario() {
+        return gestorUsuario;
+    }
+    public GestorLibro getGestorLibro() {
+        return gestorLibro;
+    }
 }

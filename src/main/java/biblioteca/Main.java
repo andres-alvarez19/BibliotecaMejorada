@@ -15,14 +15,14 @@ public class Main {
         Libro libro = new Libro("El principito", "Antoine de Saint-Exupéry", "Cuento", 2);
         Libro libro2 = new Libro("El señor de los anillos", "J.R.R. Tolkien", "Fantasia", 3);
 
-        administrador.gestorUsuario.agregarUsuario(usuario);
-        administrador.gestorUsuario.agregarUsuario(usuario2);
-        administrador.gestorLibro.agregarLibro(libro);
-        administrador.gestorLibro.agregarLibro(libro2);
+        administrador.getGestorUsuario().agregarUsuario(usuario);
+        administrador.getGestorUsuario().agregarUsuario(usuario2);
+        administrador.getGestorLibro().agregarLibro(libro);
+        administrador.getGestorLibro().agregarLibro(libro2);
 
-        mensajeLog = administrador.gestorLibro.obtenerLibros().toString();
+        mensajeLog = administrador.getGestorLibro().obtenerLibros().toString();
         logger.info(mensajeLog);
-        mensajeLog = administrador.gestorUsuario.mostrarUsuarios();
+        mensajeLog = administrador.getGestorUsuario().mostrarUsuarios();
         logger.info(mensajeLog);
 
         biblioteca.prestarLibro(libro, usuario);

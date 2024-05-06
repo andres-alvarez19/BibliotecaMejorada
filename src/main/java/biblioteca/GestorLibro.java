@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GestorLibro {
-    List<Libro> libros;
+    private List<Libro> libros;
 
     public GestorLibro() {
         this.libros = new ArrayList<>();
